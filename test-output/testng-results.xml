@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{215=Tigran Aloe Isolani, 199=Vassily Aloe Attack, 365=Wilhelm Aloe Hydration Lotion}<br>]]>
+    </line>
+    <line>
+      <![CDATA[Low Product Price is: 199 Product name is: Vassily Aloe Attack]]>
+    </line>
+    <line>
+      <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{128=Boris Almond and Honey, 353=Mikhail Almond and Talc, 195=Max honey and almond moisturiser}<br>]]>
+    </line>
+    <line>
+      <![CDATA[Low Product Price is: 128 Product name is: Boris Almond and Honey]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-01-21T00:00:40 CST" name="Default suite" finished-at="2022-01-21T00:01:05 CST" duration-ms="24153">
+    <groups>
+    </groups>
+    <test started-at="2022-01-21T00:00:40 CST" name="Default test" finished-at="2022-01-21T00:01:05 CST" duration-ms="24153">
+      <class name="weathershopper.SeleniumTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:weathershopper.SeleniumTest@6d2a209c]" started-at="2022-01-21T00:00:40 CST" name="init" finished-at="2022-01-21T00:00:43 CST" duration-ms="2502" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="BrowserAutomation()[pri:0, instance:weathershopper.SeleniumTest@6d2a209c]" started-at="2022-01-21T00:00:43 CST" name="BrowserAutomation" finished-at="2022-01-21T00:01:04 CST" duration-ms="21443" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{215=Tigran Aloe Isolani, 199=Vassily Aloe Attack, 365=Wilhelm Aloe Hydration Lotion}<br>]]>
+            </line>
+            <line>
+              <![CDATA[Low Product Price is: 199 Product name is: Vassily Aloe Attack]]>
+            </line>
+            <line>
+              <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{128=Boris Almond and Honey, 353=Mikhail Almond and Talc, 195=Max honey and almond moisturiser}<br>]]>
+            </line>
+            <line>
+              <![CDATA[Low Product Price is: 128 Product name is: Boris Almond and Honey]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- BrowserAutomation -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:weathershopper.SeleniumTest@6d2a209c]" started-at="2022-01-21T00:01:04 CST" name="teardown" finished-at="2022-01-21T00:01:05 CST" duration-ms="175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- weathershopper.SeleniumTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
