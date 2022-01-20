@@ -107,9 +107,9 @@ public class SeleniumTest extends TestBase{
 		chkPage.enterCardNumber().sendKeys("4242424242424242");
 	
 		    
-		    System.out.println(commonPage.getLocalDateAndFormatToString());
+		String strExpiryDate = commonPage.getLocalDateAndFormatToString();
 		
-		//chkPage.enterExpiryDate(getDate().now)
+		chkPage.enterExpiryDate().sendKeys(strExpiryDate);
 		
 		
 		
