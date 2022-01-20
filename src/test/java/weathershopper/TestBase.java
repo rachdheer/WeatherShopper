@@ -2,12 +2,8 @@ package weathershopper;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
-import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
-
-import org.junit.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -19,17 +15,20 @@ import org.openqa.selenium.support.ui.Wait;
 public class TestBase {
 	
 	public static WebDriver driver;
+	
     @BeforeMethod
 	public void init() {
-        //create the driver here
+        //creating the driver here
+    	System.out.println("this is before method launching");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		waitForPageLoad();
-		
     }
+    
     @AfterMethod
 	public void teardown() {
+    	System.out.println("this is after method closing");
         //quit the driver here
     	driver.close();
     	driver.quit();

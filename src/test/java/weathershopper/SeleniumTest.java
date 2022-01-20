@@ -3,22 +3,8 @@ package weathershopper;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-//import org.testng.annotations.Test;
 
-import weathershopper.WS_CheckoutPage;
-import weathershopper.WS_CommonMethodsPage;
-import weathershopper.WS_HomePage;
-
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-
-import org.junit.*;
 
 
 
@@ -30,11 +16,11 @@ public class SeleniumTest extends TestBase{
 		
 		driver.get("https://weathershopper.pythonanywhere.com/");
 		System.out.println("Get title====>"+driver.getTitle());
-		String title = driver.getTitle();
+		String actualTitle = driver.getTitle();
+		String expectedTitle = "Current Temperature";
 		
-		Assert.assertTrue(title.equals("Current Temperature"), "The expected website is not Launched");
+		Assert.assertEquals(actualTitle,expectedTitle,"The expected website is not Launched");
 		
-
 		
 		WS_HomePage homePage =  new WS_HomePage(driver);
 		WS_CommonMethodsPage commonPage = new WS_CommonMethodsPage(driver);
