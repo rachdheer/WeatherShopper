@@ -30,110 +30,105 @@ public class WS_CommonMethodsPage {
 	
 	
 	public int addProductsWithLowestPriceToCart(String strProduct) {
+		
+	
+		//Get the List of Products Names
+		List<WebElement> list_of_products = driver.findElements(By.xpath("//div[@class='text-center col-4']/p[1]"));
+		
+		//Get the List of Products Price
+		List<WebElement> list_of_products_price = driver.findElements(By.xpath("//div[@class='text-center col-4']/p[2]"));
+		
+		//Use of HashMap to store Products and Their prices(after conversion to Integer)
+		String product_name;
+		String product_price;
+		int int_product_price;
+		
+		HashMap<Integer, String> map_final_products = new HashMap<Integer,String>();
+		System.out.println("no. of products in the page ====>"+list_of_products.size() );
+		
+		//looping though list of products 
+		for(int i=0;i<list_of_products.size();i++) {
 			
-			List<WebElement> list_of_products = driver.findElements(By.xpath("//div[@class='text-center col-4']/p[1]"));
-			List<WebElement> list_of_products_price = driver.findElements(By.xpath("//div[@class='text-center col-4']/p[2]"));
+			product_name = list_of_products.get(i).getText();             	//Iterate and fetch product name
+			System.out.println("Product name =====>"+product_name);
 			
-			//Use of HashMaop to store Products and Their prices(after conversion to Integer)
-			String product_name;
-			String product_price;
-			int int_product_price;
-			
-			HashMap<Integer, String> map_final_products = new HashMap<Integer,String>();
-			
-			for(int i=0;i<list_of_products.size();i++) {
-				
-				product_name = list_of_products.get(i).getText();//Iterate and fetch product name
-				System.out.println("Product name =====>"+product_name);
-				
-				if(product_name.toUpperCase().contains(strProduct)){
+				if(product_name.toUpperCase().contains(strProduct))
+				{
 					
 					System.out.println("Came in ********");
-					product_price = list_of_products_price.get(i).getText();//Iterate and fetch product price
+					product_price = list_of_products_price.get(i).getText();	//Iterate and fetch product price
 					
-					product_price = product_price.replaceAll("[^0-9]", "");//Replace anything will space other than numbers
+					product_price = product_price.replaceAll("[^0-9]", "");		//Replace anything will space other than numbers
 					
-					int_product_price = Integer.parseInt(product_price);//Convert to Integer
+					int_product_price = Integer.parseInt(product_price);		//Convert to Integer
 					
-					map_final_products.put(int_product_price,product_name);//Add product and price in HashMap
+					map_final_products.put(int_product_price,product_name);		//Add product and price in HashMap
 				}
 				System.out.println("Came Out ********");
-			}
-			
-			
-			Reporter.log("Product Name and price fetched from UI and saved in HashMap as:" + map_final_products.toString() + "<br>");
-	 
-			//Get all the keys from Hash Map
-			Set<Integer> allkeys = map_final_products.keySet();
-			ArrayList<Integer> array_list_values_product_prices = new ArrayList<Integer>(allkeys);
-			
-			//Sort the Prices in Array List using Collections class
-			//this will sort in ascending order lowest at the top and highest at the bottom
-			Collections.sort(array_list_values_product_prices);
-			
-			//Highest Product is
-			int high_price = array_list_values_product_prices.get(array_list_values_product_prices.size()-1);
-			
-			//Low price is
-			int low_price = array_list_values_product_prices.get(0);
-			int second_low_price = array_list_values_product_prices.get(1);
-			
-			//Reporter.log("High Product Price is: " + high_price + " Product name is: " + map_final_products.get(high_price),true);
-			Reporter.log("Low Product Price is: " + low_price + " Product name is: " + map_final_products.get(low_price),true);
-			//Reporter.log("Second Low Product Price is: " + second_low_price + " Product name is: " + map_final_products.get(second_low_price),true);
-	
-			//click on lowest price product add button
-			String first_lowest_price = "(//button[contains(@onclick, '"+map_final_products.get(low_price)+"')])";
-			driver.findElement(By.xpath(first_lowest_price)).click();
-			
-			//click on second lowest product add Button
-			//String second_lowest_price = "(//button[contains(@onclick, '"+map_final_products.get(second_low_price)+"')])";
-			//driver.findElement(By.xpath(second_lowest_price)).click();
-			
-			
-			int getProductCost = low_price;
-			
-			return getProductCost;
-			
-				
-					/*
-					 * List<WebElement> myElements = driver.findElements(getProduct); for(WebElement
-					 * e : myElements) { System.out.println(e.getText());
-					 * if(e.getText().toUpperCase().contains("ALOE")) { HashMap<String, String>
-					 * hshMap = new HashMap<String, String>(); hshMap.put(e.getText(),"");
-					 * 
-					 * } }
-					 */
-					 
-			
 		}
+		
+		
+		Reporter.log("Product Name and price fetched from UI and saved in HashMap as:" + map_final_products.toString() + "<br>");
+ 
+		//Get all the keys from Hash Map
+		Set<Integer> allkeys = map_final_products.keySet();
+		ArrayList<Integer> array_list_values_product_prices = new ArrayList<Integer>(allkeys);
+		
+		//Sort the Prices in Array List using Collections class
+		//this will sort in ascending order lowest at the top and highest at the bottom
+		Collections.sort(array_list_values_product_prices);
+		
+		//Highest Product is
+		int high_price = array_list_values_product_prices.get(array_list_values_product_prices.size()-1);
+		
+		//Lowest Product price is
+		int low_price = array_list_values_product_prices.get(0);
+		
+		
+		Reporter.log("High Product Price is: " + high_price + " Product name is: " + map_final_products.get(high_price),true);
+		Reporter.log("Low Product Price is: " + low_price + " Product name is: " + map_final_products.get(low_price),true);
+		
+
+		//click on lowest price product add button
+		String first_lowest_price = "(//button[contains(@onclick, '"+map_final_products.get(low_price)+"')])";
+		driver.findElement(By.xpath(first_lowest_price)).click();
+		
+		
+		int getProductCost = low_price;
+		
+		//This will return the lowest product price
+		return getProductCost;
+		
+	}
 
 	public WebElement cart() {
 		return driver.findElement(cart);
 	}
 	
+	
+	//Return number of rows in the table
 	public List<WebElement> verifyCart() {
 		
 		List<WebElement> rows = driver.findElements(cartTable);
 		return rows;
 	}
 	
+	//This method gets the total string of Total price and convert to integer
 	public int cartTotalPrice() {
 		
 		String total_price;
 		String product_price;
 		int int_product_price;
 		
-		total_price = driver.findElement(cartTotalPrice).getText();;//Get the Total Text
-		
-		product_price = total_price.replaceAll("[^0-9]", ""); //Replace everything with space other than numbers
-		
-		int_product_price = Integer.parseInt(product_price); //Convert to Integer
+		total_price = driver.findElement(cartTotalPrice).getText();	//Get the Total Text
+		product_price = total_price.replaceAll("[^0-9]", ""); 			//Replace everything with space other than numbers
+		int_product_price = Integer.parseInt(product_price); 			//Convert to Integer
 		
 		return int_product_price;
 		
 	}
 	
+	//This function will get the system localDate and convert to string
 	public String getLocalDateAndFormatToString() {
 		
 		LocalDate date = LocalDate.now();
