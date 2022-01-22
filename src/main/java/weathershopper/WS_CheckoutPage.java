@@ -1,6 +1,7 @@
 package weathershopper;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -17,7 +18,9 @@ public class WS_CheckoutPage {
 	By cardNumberTXT  = By.xpath("//input[@id='card_number']");
 	By expiryDateTXT  = By.xpath("//input[@id='cc-exp']");
 	By cvcNumberTXT   = By.xpath("//input[@id='cc-csc']");
-	By payMoneyBTN    = By.xpath("submitButton");
+	By payMoneyBTN    = By.xpath("//button[@id='submitButton']");
+	By zipCode 		  = By.xpath("//input[@id='billing-zip']");
+	By paymentSuccess = By.xpath("//h2");
 	
 	public WebElement clickPayWithCard() 
 	{
@@ -39,8 +42,10 @@ public class WS_CheckoutPage {
 		return driver.findElement(cardNumberTXT);
 	}
 
-	public WebElement enterExpiryDate() {
-		return driver.findElement(expiryDateTXT);
+	public void enterExpiryDate(String strExpiry) {
+		//return driver.findElement(expiryDateTXT);
+		JavascriptExecutor j = (JavascriptExecutor)driver;
+	     j.executeScript ("document.getElementById('cc-exp').value='"+strExpiry+"'");
 	}
 	
 	public WebElement enterCVC() {
@@ -49,6 +54,16 @@ public class WS_CheckoutPage {
 	
 	public WebElement clickPay() {
 		return driver.findElement(payMoneyBTN);
+	}
+	
+	public WebElement enterZIPCode() {
+		return driver.findElement(zipCode);
+	}
+	
+	public  WebElement validatePayment() {
+		
+		return driver.findElement(paymentSuccess);
+		
 	}
 	
 	

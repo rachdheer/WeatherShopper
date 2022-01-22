@@ -120,7 +120,7 @@ public class WS_CommonMethodsPage {
 		String product_price;
 		int int_product_price;
 		
-		total_price = driver.findElement(cartTotalPrice).getText();	//Get the Total Text
+		total_price = driver.findElement(cartTotalPrice).getText();		//Get the Total Text
 		product_price = total_price.replaceAll("[^0-9]", ""); 			//Replace everything with space other than numbers
 		int_product_price = Integer.parseInt(product_price); 			//Convert to Integer
 		
