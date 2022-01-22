@@ -7,7 +7,7 @@
         <methods>
           <include name="BrowserAutomation"/>
           <include name="teardown"/>
-          <include name="init"/>
+          <include name="initiateBrowser"/>
         </methods>
       </class> <!-- weathershopper.SeleniumTest -->
     </classes>
