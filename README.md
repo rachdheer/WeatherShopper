@@ -84,9 +84,11 @@ The results are generated under the target folder of the project
  - path - project/target/surefire-reports/
       - index.html - Basic testng report 
       
-Individual test reports are under the TestSuite folder 
+In detail Individual browser test reports are under the TestSuite folder 
    
  - path - project/target/surefire-reports/TestSuite/
+    - ChromeTest.html
+    - FirefoxTest.html
 
   
   **** The End *******
