@@ -31,11 +31,11 @@ The Projest Structure is below
 
 Under src/main folder 
 - We have 3 class files 
-    Home Page
-    Checkout Page
-    Common Methods Page
+    - Home Page
+    - Checkout Page
+    - Common Methods Page
     
-  All the neccesary page objects and related methods are added to th erepspective pages.
+  All the neccesary page objects and related methods are added to the repspective pages.
     
 The Testscript is designed under the folder src/test 
 
