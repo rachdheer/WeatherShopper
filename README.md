@@ -17,3 +17,17 @@ Geko Driver - v30
 Prerequisites
 #Install Java
 #Install Maven and set home paths 
+
+How to Run the Project 
+
+Step 1:
+
+Downlaod the Project 
+
+Step 2:
+
+open command promt 
+
+Step 3 
+
+
