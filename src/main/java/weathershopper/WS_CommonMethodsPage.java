@@ -44,18 +44,17 @@ public class WS_CommonMethodsPage {
 		int int_product_price;
 		
 		HashMap<Integer, String> map_final_products = new HashMap<Integer,String>();
-		System.out.println("no. of products in the page ====>"+list_of_products.size() );
+		Reporter.log("no. of products in the page ====>"+list_of_products.size() );
 		
 		//looping though list of products 
 		for(int i=0;i<list_of_products.size();i++) {
 			
 			product_name = list_of_products.get(i).getText();             	//Iterate and fetch product name
-			System.out.println("Product name =====>"+product_name);
+			//System.out.println("Product name =====>"+product_name);
 			
 				if(product_name.toUpperCase().contains(strProduct))
 				{
-					
-					System.out.println("Came in ********");
+					//System.out.println("Came in ********");
 					product_price = list_of_products_price.get(i).getText();	//Iterate and fetch product price
 					
 					product_price = product_price.replaceAll("[^0-9]", "");		//Replace anything will space other than numbers
@@ -64,11 +63,11 @@ public class WS_CommonMethodsPage {
 					
 					map_final_products.put(int_product_price,product_name);		//Add product and price in HashMap
 				}
-				System.out.println("Came Out ********");
+				//System.out.println("Came Out ********");
 		}
 		
 		
-		Reporter.log("Product Name and price fetched from UI and saved in HashMap as:" + map_final_products.toString() + "<br>");
+		//Reporter.log("Product Name and price fetched from UI and saved in HashMap as:" + map_final_products.toString() + "<br>");
  
 		//Get all the keys from Hash Map
 		Set<Integer> allkeys = map_final_products.keySet();
@@ -85,8 +84,8 @@ public class WS_CommonMethodsPage {
 		int low_price = array_list_values_product_prices.get(0);
 		
 		
-		Reporter.log("High Product Price is: " + high_price + " Product name is: " + map_final_products.get(high_price),true);
-		Reporter.log("Low Product Price is: " + low_price + " Product name is: " + map_final_products.get(low_price),true);
+		//Reporter.log("High Product Price is: " + high_price + " Product name is: " + map_final_products.get(high_price),true);
+		Reporter.log("Low Product Price which contains "+strProduct+" is: " + low_price + " with Product name : " + map_final_products.get(low_price),true);
 		
 
 		//click on lowest price product add button
@@ -101,6 +100,7 @@ public class WS_CommonMethodsPage {
 		
 	}
 
+	//this will return the cart object
 	public WebElement cart() {
 		return driver.findElement(cart);
 	}

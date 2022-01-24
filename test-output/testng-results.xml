@@ -1,90 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{215=Tigran Aloe Isolani, 216=Jose Intensive Care Aloe Body Lotion, 299=Emmanuel Aloe Vera Beauty Gel, 365=Wilhelm Aloe Hydration Lotion}<br>]]>
+      <![CDATA[Getting the System Operating System ]]>
     </line>
     <line>
-      <![CDATA[High Product Price is: 365 Product name is: Wilhelm Aloe Hydration Lotion]]>
+      <![CDATA[The operating system is :mac os x]]>
     </line>
     <line>
-      <![CDATA[Low Product Price is: 215 Product name is: Tigran Aloe Isolani]]>
+      <![CDATA[This MAC browser is :Chrome]]>
     </line>
     <line>
-      <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{128=Boris Almond and Honey, 360=Alexander Almond & Honey Moisturiser}<br>]]>
+      <![CDATA[Waiting for the page to load]]>
     </line>
     <line>
-      <![CDATA[High Product Price is: 360 Product name is: Alexander Almond & Honey Moisturiser]]>
+      <![CDATA[Launching the Web Application]]>
     </line>
     <line>
-      <![CDATA[Low Product Price is: 128 Product name is: Boris Almond and Honey]]>
+      <![CDATA[The title of the application is ====>Current Temperature]]>
     </line>
     <line>
-      <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{250=Gary Bio Sandalwood SPF-50, 222=Akiba Amazing SPF-50}<br>]]>
+      <![CDATA[Getting the temperature string value from the application]]>
     </line>
     <line>
-      <![CDATA[High Product Price is: 250 Product name is: Gary Bio Sandalwood SPF-50]]>
+      <![CDATA[converted Temp value to int is ===>35]]>
     </line>
     <line>
-      <![CDATA[Low Product Price is: 222 Product name is: Akiba Amazing SPF-50]]>
+      <![CDATA[The temperature is above 34 and we are going to shop for Suncreens]]>
     </line>
     <line>
-      <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{160=Vladimir Sun Expert SPF-30, 195=Vishy La Shield Sunscreen spf-30, 140=Magnus Resistant Sunscreen SPF-30}<br>]]>
+      <![CDATA[Waiting for the page to load]]>
     </line>
     <line>
-      <![CDATA[High Product Price is: 195 Product name is: Vishy La Shield Sunscreen spf-30]]>
+      <![CDATA[Low Product Price which contains SPF-50 is: 222 with Product name : Akiba Amazing SPF-50]]>
     </line>
     <line>
-      <![CDATA[Low Product Price is: 140 Product name is: Magnus Resistant Sunscreen SPF-30]]>
+      <![CDATA[Low Product Price which contains SPF-30 is: 116 with Product name : Vassily Brilliant SPF-30]]>
+    </line>
+    <line>
+      <![CDATA[Waiting for the page to load]]>
+    </line>
+    <line>
+      <![CDATA[The total number of products added to cart is :2]]>
+    </line>
+    <line>
+      <![CDATA[The total cost of the Products is :338]]>
+    </line>
+    <line>
+      <![CDATA[Waiting for the page to load]]>
+    </line>
+    <line>
+      <![CDATA[click the PaywithCard button after addding th eproducts to CART ]]>
+    </line>
+    <line>
+      <![CDATA[Switch to Stripe pop up frame]]>
+    </line>
+    <line>
+      <![CDATA[Entering the email ID]]>
+    </line>
+    <line>
+      <![CDATA[Entering the Card Niumber ]]>
+    </line>
+    <line>
+      <![CDATA[Getting the Local date from the System and format to string with 1 year ahead]]>
+    </line>
+    <line>
+      <![CDATA[Enetring Expiry Date]]>
+    </line>
+    <line>
+      <![CDATA[Enetring CVV]]>
+    </line>
+    <line>
+      <![CDATA[Enetring ZIP Code]]>
+    </line>
+    <line>
+      <![CDATA[Click Payment]]>
+    </line>
+    <line>
+      <![CDATA[Waiting for the page to load]]>
+    </line>
+    <line>
+      <![CDATA[Validating Payment]]>
+    </line>
+    <line>
+      <![CDATA[The payemnt attributeCheckout]]>
+    </line>
+    <line>
+      <![CDATA[Payment Failed ]]>
+    </line>
+    <line>
+      <![CDATA[Closing the Browser]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-01-23T00:51:02 CST" name="TestSuite" finished-at="2022-01-23T00:51:20 CST" duration-ms="17956">
+  <suite started-at="2022-01-24T21:54:00 CST" name="TestSuite" finished-at="2022-01-24T21:54:13 CST" duration-ms="12419">
     <groups>
     </groups>
-    <test started-at="2022-01-23T00:51:02 CST" name="FirefoxTest" finished-at="2022-01-23T00:51:19 CST" duration-ms="17226">
+    <test started-at="2022-01-24T21:54:00 CST" name="ChromeTest" finished-at="2022-01-24T21:54:13 CST" duration-ms="12419">
       <class name="weathershopper.SeleniumTest">
-        <test-method is-config="true" signature="initiateBrowser(java.lang.String)[pri:0, instance:weathershopper.SeleniumTest@5f058f00]" started-at="2022-01-23T00:51:02 CST" name="initiateBrowser" finished-at="2022-01-23T00:51:06 CST" duration-ms="3737" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initiateBrowser -->
-        <test-method signature="WeatherShopperEndToEndAutomation()[pri:0, instance:weathershopper.SeleniumTest@5f058f00]" started-at="2022-01-23T00:51:06 CST" name="WeatherShopperEndToEndAutomation" finished-at="2022-01-23T00:51:19 CST" duration-ms="13457" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{215=Tigran Aloe Isolani, 216=Jose Intensive Care Aloe Body Lotion, 299=Emmanuel Aloe Vera Beauty Gel, 365=Wilhelm Aloe Hydration Lotion}<br>]]>
-            </line>
-            <line>
-              <![CDATA[High Product Price is: 365 Product name is: Wilhelm Aloe Hydration Lotion]]>
-            </line>
-            <line>
-              <![CDATA[Low Product Price is: 215 Product name is: Tigran Aloe Isolani]]>
-            </line>
-            <line>
-              <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{128=Boris Almond and Honey, 360=Alexander Almond & Honey Moisturiser}<br>]]>
-            </line>
-            <line>
-              <![CDATA[High Product Price is: 360 Product name is: Alexander Almond & Honey Moisturiser]]>
-            </line>
-            <line>
-              <![CDATA[Low Product Price is: 128 Product name is: Boris Almond and Honey]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- WeatherShopperEndToEndAutomation -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:weathershopper.SeleniumTest@5f058f00]" started-at="2022-01-23T00:51:19 CST" name="teardown" finished-at="2022-01-23T00:51:19 CST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- weathershopper.SeleniumTest -->
-    </test> <!-- FirefoxTest -->
-    <test started-at="2022-01-23T00:51:02 CST" name="ChromeTest" finished-at="2022-01-23T00:51:20 CST" duration-ms="17956">
-      <class name="weathershopper.SeleniumTest">
-        <test-method is-config="true" signature="initiateBrowser(java.lang.String)[pri:0, instance:weathershopper.SeleniumTest@769f71a9]" started-at="2022-01-23T00:51:02 CST" name="initiateBrowser" finished-at="2022-01-23T00:51:04 CST" duration-ms="2141" status="PASS">
+        <test-method is-config="true" signature="initiateBrowser(java.lang.String)[pri:0, instance:weathershopper.SeleniumTest@769f71a9]" started-at="2022-01-24T21:54:00 CST" name="initiateBrowser" finished-at="2022-01-24T21:54:02 CST" duration-ms="1883" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -93,32 +106,145 @@
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Getting the System Operating System ]]>
+            </line>
+            <line>
+              <![CDATA[The operating system is :mac os x]]>
+            </line>
+            <line>
+              <![CDATA[This MAC browser is :Chrome]]>
+            </line>
+            <line>
+              <![CDATA[Waiting for the page to load]]>
+            </line>
           </reporter-output>
         </test-method> <!-- initiateBrowser -->
-        <test-method signature="WeatherShopperEndToEndAutomation()[pri:0, instance:weathershopper.SeleniumTest@769f71a9]" started-at="2022-01-23T00:51:04 CST" name="WeatherShopperEndToEndAutomation" finished-at="2022-01-23T00:51:20 CST" duration-ms="15785" status="PASS">
+        <test-method signature="WeatherShopperEndToEndAutomation()[pri:0, instance:weathershopper.SeleniumTest@769f71a9]" started-at="2022-01-24T21:54:02 CST" name="WeatherShopperEndToEndAutomation" finished-at="2022-01-24T21:54:12 CST" duration-ms="10248" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The Payment Failed expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The Payment Failed expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at weathershopper.SeleniumTest.WeatherShopperEndToEndAutomation(SeleniumTest.java:159)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{250=Gary Bio Sandalwood SPF-50, 222=Akiba Amazing SPF-50}<br>]]>
+              <![CDATA[Launching the Web Application]]>
             </line>
             <line>
-              <![CDATA[High Product Price is: 250 Product name is: Gary Bio Sandalwood SPF-50]]>
+              <![CDATA[The title of the application is ====>Current Temperature]]>
             </line>
             <line>
-              <![CDATA[Low Product Price is: 222 Product name is: Akiba Amazing SPF-50]]>
+              <![CDATA[Getting the temperature string value from the application]]>
             </line>
             <line>
-              <![CDATA[Product Name and price fetched from UI and saved in HashMap as:{160=Vladimir Sun Expert SPF-30, 195=Vishy La Shield Sunscreen spf-30, 140=Magnus Resistant Sunscreen SPF-30}<br>]]>
+              <![CDATA[converted Temp value to int is ===>35]]>
             </line>
             <line>
-              <![CDATA[High Product Price is: 195 Product name is: Vishy La Shield Sunscreen spf-30]]>
+              <![CDATA[The temperature is above 34 and we are going to shop for Suncreens]]>
             </line>
             <line>
-              <![CDATA[Low Product Price is: 140 Product name is: Magnus Resistant Sunscreen SPF-30]]>
+              <![CDATA[Waiting for the page to load]]>
+            </line>
+            <line>
+              <![CDATA[Low Product Price which contains SPF-50 is: 222 with Product name : Akiba Amazing SPF-50]]>
+            </line>
+            <line>
+              <![CDATA[Low Product Price which contains SPF-30 is: 116 with Product name : Vassily Brilliant SPF-30]]>
+            </line>
+            <line>
+              <![CDATA[Waiting for the page to load]]>
+            </line>
+            <line>
+              <![CDATA[The total number of products added to cart is :2]]>
+            </line>
+            <line>
+              <![CDATA[The total cost of the Products is :338]]>
+            </line>
+            <line>
+              <![CDATA[Waiting for the page to load]]>
+            </line>
+            <line>
+              <![CDATA[click the PaywithCard button after addding th eproducts to CART ]]>
+            </line>
+            <line>
+              <![CDATA[Switch to Stripe pop up frame]]>
+            </line>
+            <line>
+              <![CDATA[Entering the email ID]]>
+            </line>
+            <line>
+              <![CDATA[Entering the Card Niumber ]]>
+            </line>
+            <line>
+              <![CDATA[Getting the Local date from the System and format to string with 1 year ahead]]>
+            </line>
+            <line>
+              <![CDATA[Enetring Expiry Date]]>
+            </line>
+            <line>
+              <![CDATA[Enetring CVV]]>
+            </line>
+            <line>
+              <![CDATA[Enetring ZIP Code]]>
+            </line>
+            <line>
+              <![CDATA[Click Payment]]>
+            </line>
+            <line>
+              <![CDATA[Waiting for the page to load]]>
+            </line>
+            <line>
+              <![CDATA[Validating Payment]]>
+            </line>
+            <line>
+              <![CDATA[The payemnt attributeCheckout]]>
+            </line>
+            <line>
+              <![CDATA[Payment Failed ]]>
             </line>
           </reporter-output>
         </test-method> <!-- WeatherShopperEndToEndAutomation -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:weathershopper.SeleniumTest@769f71a9]" started-at="2022-01-23T00:51:20 CST" name="teardown" finished-at="2022-01-23T00:51:20 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:weathershopper.SeleniumTest@769f71a9]" started-at="2022-01-24T21:54:12 CST" name="teardown" finished-at="2022-01-24T21:54:13 CST" duration-ms="253" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Closing the Browser]]>
+            </line>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- weathershopper.SeleniumTest -->

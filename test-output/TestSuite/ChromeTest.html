@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>ChromeTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jan 23 00:51:02 CST 2022</td>
+<td>Started on:</td><td>Mon Jan 24 21:54:00 CST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17956 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12419 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,20 +76,76 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='weathershopper.SeleniumTest.WeatherShopperEndToEndAutomation()'><b>WeatherShopperEndToEndAutomation</b><br>Test class: weathershopper.SeleniumTest<br/>
-<a href="#Output-603333437" onClick='toggleBox("Output-603333437", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2066892165" onClick='toggleBox("Output-2066892165", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-603333437" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-603333437">
-Product Name and price fetched from UI and saved in HashMap as:{250=Gary Bio Sandalwood SPF-50, 222=Akiba Amazing SPF-50}<br><br/>
-High Product Price is: 250 Product name is: Gary Bio Sandalwood SPF-50<br/>
-Low Product Price is: 222 Product name is: Akiba Amazing SPF-50<br/>
-Product Name and price fetched from UI and saved in HashMap as:{160=Vladimir Sun Expert SPF-30, 195=Vishy La Shield Sunscreen spf-30, 140=Magnus Resistant Sunscreen SPF-30}<br><br/>
-High Product Price is: 195 Product name is: Vishy La Shield Sunscreen spf-30<br/>
-Low Product Price is: 140 Product name is: Magnus Resistant Sunscreen SPF-30<br/>
+<a href="#Output-2066892165" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2066892165">
+Launching the Web Application<br/>
+The title of the application is ====>Current Temperature<br/>
+Getting the temperature string value from the application<br/>
+converted Temp value to int is ===>35<br/>
+The temperature is above 34 and we are going to shop for Suncreens<br/>
+Waiting for the page to load<br/>
+Low Product Price which contains SPF-50 is: 222 with Product name : Akiba Amazing SPF-50<br/>
+Low Product Price which contains SPF-30 is: 116 with Product name : Vassily Brilliant SPF-30<br/>
+Waiting for the page to load<br/>
+The total number of products added to cart is :2<br/>
+The total cost of the Products is :338<br/>
+Waiting for the page to load<br/>
+click the PaywithCard button after addding th eproducts to CART <br/>
+Switch to Stripe pop up frame<br/>
+Entering the email ID<br/>
+Entering the Card Niumber <br/>
+Getting the Local date from the System and format to string with 1 year ahead<br/>
+Enetring Expiry Date<br/>
+Enetring CVV<br/>
+Enetring ZIP Code<br/>
+Click Payment<br/>
+Waiting for the page to load<br/>
+Validating Payment<br/>
+The payemnt attributeCheckout<br/>
+Payment Failed <br/>
 </div>
 </td>
-<td></td>
-<td>15</td>
+<td><div><pre>java.lang.AssertionError: The Payment Failed expected [true] but found [false]
+	at weathershopper.SeleniumTest.WeatherShopperEndToEndAutomation(SeleniumTest.java:159)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2066892165", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2066892165'><pre>java.lang.AssertionError: The Payment Failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at weathershopper.SeleniumTest.WeatherShopperEndToEndAutomation(SeleniumTest.java:159)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
 <td>weathershopper.SeleniumTest@769f71a9</td></tr>
 </table><p>
 </body>

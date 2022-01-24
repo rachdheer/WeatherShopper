@@ -21,6 +21,7 @@ public class WS_CheckoutPage {
 	By payMoneyBTN    = By.xpath("//button[@id='submitButton']");
 	By zipCode 		  = By.xpath("//input[@id='billing-zip']");
 	By paymentSuccess = By.xpath("//h2");
+	By confirmation   = By.xpath("//title[contains(text(),'Confirmation')]");
 	
 	public WebElement clickPayWithCard() 
 	{
@@ -60,11 +61,19 @@ public class WS_CheckoutPage {
 		return driver.findElement(zipCode);
 	}
 	
+	public  WebElement confirmationTitle() {
+		
+		return driver.findElement(confirmation);
+		
+	}
+	
 	public  WebElement validatePayment() {
 		
 		return driver.findElement(paymentSuccess);
 		
 	}
+	
+
 	
 	
 }
