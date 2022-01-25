@@ -91,7 +91,7 @@ In detail Individual browser test reports are under the TestSuite folder
     - FirefoxTest.html
 
   NOTE: I have commented the code which maximise the browser to see the parallel execution in browser.
-        The respective code is in the BaseTest class, line number 84
+        The respective code is in the TestBase class, line number 84
 
  
   **** The End *******
